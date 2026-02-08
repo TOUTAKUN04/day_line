@@ -122,6 +122,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestNotificationPermissionIfNeeded()
+        requestExactAlarmPermissionIfNeeded()
         requestLocationPermissionIfNeeded()
         setContent {
             DayLineTheme {
@@ -158,6 +159,20 @@ private fun ComponentActivity.requestLocationPermissionIfNeeded() {
             ),
             1002
         )
+    }
+}
+
+private fun ComponentActivity.requestExactAlarmPermissionIfNeeded() {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+        val alarmManager = getSystemService(android.app.AlarmManager::class.java)
+        if (alarmManager != null && !alarmManager.canScheduleExactAlarms()) {
+            try {
+                val intent = android.content.Intent(android.provider.Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM)
+                startActivity(intent)
+            } catch (_: Exception) {
+                // If the system blocks the intent, fail silently.
+            }
+        }
     }
 }
 

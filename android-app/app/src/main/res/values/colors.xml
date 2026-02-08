@@ -11,9 +11,9 @@
     <color name="widget_glass_highlight">#1AFFFFFF</color>
     <color name="widget_glass_mid">#0FFFFFFF</color>
     <color name="widget_glass_shadow">#08FFFFFF</color>
-    <color name="widget_title">#0F172A</color>
-    <color name="widget_subtitle">#64748B</color>
-    <color name="widget_subtitle_faint">#9964748B</color>
-    <color name="widget_task">#0F172A</color>
+    <color name="widget_title">#FFFFFF</color>
+    <color name="widget_subtitle">#E6FFFFFF</color>
+    <color name="widget_subtitle_faint">#CCE5E7EB</color>
+    <color name="widget_task">#FFFFFF</color>
     <color name="ic_launcher_background">#FFFFFF</color>
 </resources>
