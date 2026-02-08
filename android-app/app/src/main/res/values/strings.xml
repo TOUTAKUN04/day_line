@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Day Line</string>
+    <string name="widget_daily_tasks">Day Line tasks (pending)</string>
+</resources>
