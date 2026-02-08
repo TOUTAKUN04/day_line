@@ -43,4 +43,4 @@ Release build:
 - Weather uses the Open-Meteo API (no API key required).
 
 ## Changelog
-See `CHANGELOG.md`. [![Check Here.](https://commondatastorage.googleapis.com/codeskulptor-assets/week8-dart.png)](https://github.com/TOUTAKUN04/day_line/blob/main/android-app/CHANGELOG.md)
+See `CHANGELOG.md`. [![Check Here.](https://upload.wikimedia.org/wikipedia/commons/e/ee/Chain_link_icon.png)](https://github.com/TOUTAKUN04/day_line/blob/main/android-app/CHANGELOG.md)
