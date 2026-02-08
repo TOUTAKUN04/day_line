@@ -1,5 +1,7 @@
 # Day Line
 
+[![Download APK](https://img.shields.io/badge/Download-APK-2ea44f)](https://github.com/TOUTAKUN04/day_line/releases/download/v1.0.1/day_line_v1.0.1.apk)
+
 Day Line is a lightweight daily task planner with reminders, start-time alarms, and a home screen widget.
 
 ## Features
