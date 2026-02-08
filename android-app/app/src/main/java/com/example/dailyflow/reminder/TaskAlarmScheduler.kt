@@ -41,8 +41,14 @@ object TaskAlarmScheduler {
 
         tasks.filter { !it.template && !it.completed }.forEach { task ->
             val eventTime = task.toDateTime() ?: return@forEach
-            if (eventTime.isAfter(now)) {
-                if (schedule(context, task, eventTime)) {
+            val triggerTime = if (eventTime.isAfter(now)) {
+                eventTime
+            } else {
+                val secondsDiff = java.time.Duration.between(eventTime, now).seconds
+                if (secondsDiff in 0..59) now.plusSeconds(5) else null
+            }
+            if (triggerTime != null) {
+                if (schedule(context, task, triggerTime)) {
                     newIds += task.id
                 }
             }
