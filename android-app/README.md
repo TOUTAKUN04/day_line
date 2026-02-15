@@ -1,14 +1,16 @@
 # Day Line
 
-[![Download APK](https://img.shields.io/badge/Download-APK-2ea44f)](https://github.com/TOUTAKUN04/day_line/releases/download/v1.1.0/day_line_v1.1.0.apk)
+[![Download APK](https://img.shields.io/badge/Download-APK-2ea44f)](https://github.com/TOUTAKUN04/day_line/releases/download/v1.1.2/day_line_v1.1.2.apk)
 
 ## Release
-Day Line v1.1.0 - Widgets & Walk-o-meter Update
+Day Line v1.1.2 - Calendar Week Intensity Update
 
 ## About
 Day Line now combines daily task planning and movement tracking, with smarter alarms, upgraded widgets, and refreshed branding.
 
 ## What's New
+- Weekly Intensity Score now tracks a fixed Monday-Sunday week
+- Weekly line resets at local Monday 12:00 AM
 - Added Walk-o-meter home screen widget
 - Updated package/branding to `com.toutakun04.dayline`
 - Refreshed launcher/adaptive icons (Android 12+ support)

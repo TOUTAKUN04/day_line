@@ -1,6 +1,11 @@
 # Changelog
 
-## 1.1.0 
+## 1.1.2 (2026-02-15)
+- Weekly Intensity Score line now uses a fixed calendar week (Monday to Sunday)
+- Weekly line resets at local Monday 12:00 AM for predictable tracking
+- Release version updated to `v1.1.2`
+
+## 1.1.0
 - Renamed package and app namespace to `com.toutakun04.dayline`
 - Added a new Walk-o-meter home screen widget (`WalkMeterWidgetProvider`)
 - Added Android 12+ launcher/theme resources (adaptive icon and monochrome assets)

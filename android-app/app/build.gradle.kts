@@ -18,8 +18,8 @@ android {
         applicationId = "com.toutakun04.dayline"
         minSdk = 24
         targetSdk = 34
-        versionCode = 3
-        versionName = "v1.1.0"
+        versionCode = 4
+        versionName = "v1.1.2"
     }
 
     buildTypes {
