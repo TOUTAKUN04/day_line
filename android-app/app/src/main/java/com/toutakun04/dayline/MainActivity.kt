@@ -2267,8 +2267,11 @@ fun ActivityTrackingScreen(isVisible: Boolean) {
     }
     val todayMoveMinutes = maxOf(todayMoveMinutesFromLogs, todayMoveMinutesFromWalkMeter).coerceAtLeast(0f)
     val weeklyIntensityLineGoal = 150
-    val weeklyIntensityLineScore = remember(walkWeeklyGoalStatus) {
-        walkWeeklyGoalStatus.sumOf { it.moveScore.coerceAtLeast(0) }
+    val weeklyIntensityLineScore = remember(history.entries, todayMoveScore, persistedWalkScoresByDate) {
+        history.entries.currentCalendarWeekIntensityScore(
+            todayMoveScoreLive = todayMoveScore,
+            persistedWalkScoresByDate = persistedWalkScoresByDate
+        )
     }
     val appendActivityEntry: (ActivityLogEntry) -> Unit = { entry ->
         val normalizedPoints = entry.stridePoints.toIntOrNull()
@@ -4244,6 +4247,23 @@ private fun List<ActivityLogEntry>.walkGoalStreak(
         cursor = cursor.minusDays(1)
     }
     return streak
+}
+
+private fun List<ActivityLogEntry>.currentCalendarWeekIntensityScore(
+    todayMoveScoreLive: Int,
+    persistedWalkScoresByDate: Map<LocalDate, Int> = emptyMap(),
+    referenceDate: LocalDate = LocalDate.now()
+): Int {
+    val totals = walkScoreTotalsByDate(
+        todayMoveScoreLive = todayMoveScoreLive,
+        persistedWalkScoresByDate = persistedWalkScoresByDate,
+        referenceDate = referenceDate
+    )
+    val weekStart = referenceDate.minusDays((referenceDate.dayOfWeek.value - DayOfWeek.MONDAY.value).toLong())
+    val weekEnd = weekStart.plusDays(6)
+    return totals.entries.sumOf { (date, score) ->
+        if (date.isBefore(weekStart) || date.isAfter(weekEnd)) 0 else score.coerceAtLeast(0)
+    }
 }
 
 private fun List<ActivityLogEntry>.walkDurationMinutesForDate(
