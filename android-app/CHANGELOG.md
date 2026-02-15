@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.0 (2026-02-15)
+- Renamed package and app namespace to `com.toutakun04.dayline`
+- Added a new Walk-o-meter home screen widget (`WalkMeterWidgetProvider`)
+- Added Android 12+ launcher/theme resources (adaptive icon and monochrome assets)
+- Updated widget visuals and strings to match Day Line branding
+- Added walk tracking service/permission wiring in `AndroidManifest.xml`
+
 ## 1.0.1x
 - Alarm scheduling now works within the current minute
 - Prompt users to allow exact alarms on Android 12+
