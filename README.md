@@ -55,6 +55,6 @@ Release build:
 - Weather uses the Open-Meteo API (no API key required).
 
 ## Changelog
-See `android-app/CHANGELOG.md`.
+See `android-app/CHANGELOG.md`. [Click here.](https://github.com/TOUTAKUN04/day_line/blob/main/android-app/CHANGELOG.md)
 
 
