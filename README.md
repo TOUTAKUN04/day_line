@@ -2,13 +2,18 @@
 
 [![Download APK](https://img.shields.io/badge/Download-APK-2ea44f)](https://github.com/TOUTAKUN04/day_line/releases/download/v1.1.0/day_line_v1.1.0.apk)
 
-Day Line is a lightweight daily planner with reminders, start-time alarms, weather, and home screen widgets.
+## Release
+Day Line v1.1.0 - Widgets & Walk-o-meter Update
 
-## What's New In v1.1.0
-- Package and application ID renamed to `com.toutakun04.dayline`
-- New Walk-o-meter home screen widget with goal and score progress
-- Updated adaptive launcher icon resources and Android 12+ theme assets
-- Refined task widget visuals and app branding
+## About
+Day Line now combines daily task planning and movement tracking, with smarter alarms, upgraded widgets, and refreshed branding.
+
+## What's New
+- Added Walk-o-meter home screen widget
+- Updated package/branding to `com.toutakun04.dayline`
+- Refreshed launcher/adaptive icons (Android 12+ support)
+- Improved reminder and alarm behavior
+- Added stronger license and security policy
 
 ## Features
 - Create tasks with date/time, categories, tags, and notes
@@ -50,6 +55,11 @@ Release build:
 - Weather uses the Open-Meteo API (no API key required).
 
 ## Changelog
-See `CHANGELOG.md`. [Click here.](https://github.com/TOUTAKUN04/day_line/blob/main/android-app/CHANGELOG.md)
+See `android-app/CHANGELOG.md`.
+
+## Versioning
+- `v1.2.0` for new features
+- `v1.2.1` for bug fixes
+- `v2.0.0` for major redesign or breaking changes
 
 
