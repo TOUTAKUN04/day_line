@@ -1,19 +1,49 @@
-Day Line Non-Commercial License
+Day Line Proprietary No-Modification License
+Version 1.0 (2026-02-15)
 
 Copyright (c) 2026 TOUTAKUN04
+All rights reserved.
 
-Permission is granted to any person obtaining a copy of this software and
-associated documentation files (the "Software"), to use, copy, modify, and
-distribute the Software for personal or non-commercial purposes only.
+THIS IS NOT AN OPEN SOURCE LICENSE.
 
-Commercial use, sale, sublicensing, or distribution of the Software for
-commercial advantage or monetary compensation is strictly prohibited without
-prior written permission from the copyright holder.
+1. Limited Permission
+You are granted a limited, revocable, non-exclusive, non-transferable license
+to download and use unmodified copies of this software solely for personal,
+non-commercial use.
 
+2. Prohibited Actions
+Without prior written permission from the copyright holder, you may NOT:
+- modify, adapt, translate, patch, alter, or create derivative works;
+- decompile, disassemble, reverse engineer, or attempt to extract source from
+  binary distributions, except where prohibited by applicable law;
+- remove, disable, bypass, or interfere with security controls, integrity
+  checks, alarms, notifications, or permission flows;
+- tamper with, inject, falsify, delete, or manipulate application data,
+  stored records, logs, telemetry, or generated outputs;
+- redistribute, sublicense, sell, lease, host, mirror, publish, or otherwise
+  make this software available to third parties;
+- use this software for commercial purposes.
+
+3. Data Integrity And Security
+You must preserve data integrity and system security when using this software.
+Any unauthorized data manipulation, policy bypass, or security circumvention is
+strictly prohibited.
+
+4. Ownership
+All intellectual property rights, title, and interest in the software remain
+with the copyright holder.
+
+5. Termination
+Any violation of this license immediately terminates your rights under it.
+Upon termination, you must stop all use and delete all copies in your control.
+
+6. No Warranty
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
+
+7. Limitation Of Liability
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR
+OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+OR OTHER DEALINGS IN THE SOFTWARE.
