@@ -46,4 +46,4 @@ We apply standard Android app controls and local storage boundaries. No method i
 
 ## Contact
 For privacy questions, contact:
-- `<add-support-email>`
+-  `konoetouta69@gmail.com`
