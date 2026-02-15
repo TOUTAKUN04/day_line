@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.1.2 (2026-02-15)
+## 1.1.2 
 - Weekly Intensity Score line now uses a fixed calendar week (Monday to Sunday)
 - Weekly line resets at local Monday 12:00 AM for predictable tracking
 - Release version updated to `v1.1.2`
