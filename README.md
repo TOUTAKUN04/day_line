@@ -57,9 +57,4 @@ Release build:
 ## Changelog
 See `android-app/CHANGELOG.md`.
 
-## Versioning
-- `v1.2.0` for new features
-- `v1.2.1` for bug fixes
-- `v2.0.0` for major redesign or breaking changes
-
 
