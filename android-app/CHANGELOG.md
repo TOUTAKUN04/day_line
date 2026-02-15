@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.1.0 (2026-02-15)
+## 1.1.0 
 - Renamed package and app namespace to `com.toutakun04.dayline`
 - Added a new Walk-o-meter home screen widget (`WalkMeterWidgetProvider`)
 - Added Android 12+ launcher/theme resources (adaptive icon and monochrome assets)
