@@ -1,4 +1,7 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.gradle.api.GradleException
+import java.io.FileInputStream
+import java.util.Properties
 
 plugins {
     id("com.android.application")
@@ -9,6 +12,22 @@ plugins {
 
 // Use a dedicated build directory to avoid stale state issues.
 layout.buildDirectory.set(file("$rootDir/build-app"))
+
+val releaseKeystorePropertiesFile = rootProject.file("keystore.properties")
+val releaseKeystoreProperties = Properties()
+val releaseSigningConfigured = if (releaseKeystorePropertiesFile.exists()) {
+    FileInputStream(releaseKeystorePropertiesFile).use { stream ->
+        releaseKeystoreProperties.load(stream)
+    }
+    true
+} else {
+    false
+}
+
+fun releaseSigningProperty(name: String): String {
+    return releaseKeystoreProperties.getProperty(name)
+        ?: throw GradleException("Missing '$name' in keystore.properties")
+}
 
 android {
     namespace = "com.toutakun04.dayline"
@@ -22,12 +41,26 @@ android {
         versionName = "v1.1.2"
     }
 
+    signingConfigs {
+        if (releaseSigningConfigured) {
+            create("release") {
+                storeFile = rootProject.file(releaseSigningProperty("storeFile"))
+                storePassword = releaseSigningProperty("storePassword")
+                keyAlias = releaseSigningProperty("keyAlias")
+                keyPassword = releaseSigningProperty("keyPassword")
+            }
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
-            // Use debug signing for local release APK installs.
-            // Replace with a real release keystore before publishing.
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = if (releaseSigningConfigured) {
+                signingConfigs.getByName("release")
+            } else {
+                logger.warn("Release keystore not configured. Using debug signing. Set keystore.properties for store builds.")
+                signingConfigs.getByName("debug")
+            }
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"

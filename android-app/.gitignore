@@ -7,6 +7,10 @@
 
 # Local config
 /local.properties
+/keystore.properties
+/keystore/
+*.jks
+*.keystore
 
 # IDE
 /.idea/

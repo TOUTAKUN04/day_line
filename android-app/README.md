@@ -58,3 +58,9 @@ Release build:
 
 ## Changelog
 See `CHANGELOG.md`. [Click here.](https://github.com/TOUTAKUN04/day_line/blob/main/android-app/CHANGELOG.md)
+
+## Store Publishing
+- Amazon submission checklist: `docs/AMAZON_APPSTORE_SUBMISSION_READY.md`
+- Amazon listing template: `docs/AMAZON_APPSTORE_LISTING_TEMPLATE.md`
+- Privacy policy file: `PRIVACY_POLICY.md`
+- Release signing helper script: `scripts/generate-release-keystore.ps1`
