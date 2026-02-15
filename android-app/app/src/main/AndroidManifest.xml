@@ -1,14 +1,15 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dailyflow">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_HEALTH" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
 
     <application
         android:allowBackup="true"
@@ -40,6 +41,18 @@
         </receiver>
 
         <receiver
+            android:name=".widget.WalkMeterWidgetProvider"
+            android:exported="false"
+            android:label="@string/widget_walk_meter">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/walk_meter_widget_info" />
+        </receiver>
+
+        <receiver
             android:name=".reminder.TaskReminderReceiver"
             android:exported="false" />
 
@@ -50,6 +63,11 @@
         <receiver
             android:name=".reminder.TaskAlarmDismissReceiver"
             android:exported="false" />
+
+        <service
+            android:name=".WalkMeterBackgroundService"
+            android:exported="false"
+            android:foregroundServiceType="health" />
 
         <service
             android:name=".reminder.AlarmRingerService"

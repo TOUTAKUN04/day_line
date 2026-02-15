@@ -8,4 +8,5 @@
     <color name="widget_subtitle">#E6FFFFFF</color>
     <color name="widget_subtitle_faint">#CCE5E7EB</color>
     <color name="widget_task">#FFFFFF</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
 </resources>

@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -6,18 +8,18 @@ plugins {
 }
 
 // Use a dedicated build directory to avoid stale state issues.
-buildDir = file("$rootDir/build-app")
+layout.buildDirectory.set(file("$rootDir/build-app"))
 
 android {
-    namespace = "com.example.dailyflow"
+    namespace = "com.toutakun04.dayline"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.dailyflow"
+        applicationId = "com.toutakun04.dayline"
         minSdk = 24
         targetSdk = 34
-        versionCode = 2
-        versionName = "1.0.1x"
+        versionCode = 3
+        versionName = "v1.1.0"
     }
 
     buildTypes {
@@ -43,14 +45,16 @@ android {
         isCoreLibraryDesugaringEnabled = true
     }
 
-    kotlinOptions {
-        jvmTarget = "17"
-    }
-
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_17)
     }
 }
 

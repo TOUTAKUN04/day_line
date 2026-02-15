@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "DailyFlow"
+rootProject.name = "Day Line"
 include(":app")

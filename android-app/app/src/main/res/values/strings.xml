@@ -1,4 +1,26 @@
 <resources>
     <string name="app_name">Day Line</string>
     <string name="widget_daily_tasks">Day Line tasks (pending)</string>
+    <string name="widget_preview_greeting">Good Morning</string>
+    <string name="widget_preview_add">+ Add</string>
+    <string name="widget_preview_date_temp">Sat, Feb 7 &#8211; 24&#176;C</string>
+    <string name="widget_preview_count">2 tasks left</string>
+    <string name="widget_preview_empty">No upcoming tasks</string>
+    <string name="widget_preview_task_1">Mon 9:00 AM - Task</string>
+    <string name="widget_preview_task_2">Tue 10:00 AM - Task</string>
+    <string name="widget_preview_task_3">Wed 11:00 AM - Task</string>
+    <string name="widget_preview_more">and 2 more</string>
+    <string name="widget_walk_meter">Walk-o-meter</string>
+    <string name="widget_walk_preview_title">Walk-o-meter</string>
+    <string name="widget_walk_preview_subtitle">No live pace yet</string>
+    <string name="widget_walk_preview_steps">0 / 6000 steps</string>
+    <string name="widget_walk_preview_score">Score 0 / 30</string>
+    <string name="widget_walk_preview_updated">Updated --</string>
+    <string name="widget_walk_preview_percent">0%</string>
+    <string name="widget_walk_preview_center">goal</string>
+    <string name="walk_meter_tracking_channel_name">Walk-o-meter tracking</string>
+    <string name="walk_meter_tracking_channel_desc">Keeps step tracking active in background.</string>
+    <string name="walk_meter_tracking_title">Walk-o-meter running</string>
+    <string name="walk_meter_tracking_content">Today: %1$d steps</string>
+    <string name="walk_meter_tracking_stop">Stop</string>
 </resources>

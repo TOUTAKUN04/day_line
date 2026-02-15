@@ -7,14 +7,33 @@
     android:orientation="vertical"
     android:padding="12dp">
 
-    <TextView
-        android:id="@+id/widget_greeting"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/widget_title"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:text="Good Morning" />
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/widget_greeting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/widget_title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="@string/widget_preview_greeting" />
+
+        <TextView
+            android:id="@+id/widget_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/widget_add_background"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:textColor="@color/widget_subtitle"
+            android:textSize="14sp"
+            android:text="@string/widget_preview_add" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/widget_date_temp"
@@ -23,7 +42,7 @@
         android:layout_marginTop="2dp"
         android:textColor="@color/widget_subtitle"
         android:textSize="18sp"
-        android:text="Sat, Feb 7 • 24°C" />
+        android:text="@string/widget_preview_date_temp" />
 
     <TextView
         android:id="@+id/widget_count"
@@ -32,7 +51,7 @@
         android:layout_marginTop="6dp"
         android:textColor="@color/widget_subtitle_faint"
         android:textSize="18sp"
-        android:text="2 tasks left" />
+        android:text="@string/widget_preview_count" />
 
     <TextView
         android:id="@+id/widget_empty"
@@ -41,7 +60,7 @@
         android:layout_marginTop="8dp"
         android:textColor="@color/widget_task"
         android:textSize="19sp"
-        android:text="No upcoming tasks"
+        android:text="@string/widget_preview_empty"
         android:visibility="gone" />
 
     <TextView
@@ -51,7 +70,7 @@
         android:layout_marginTop="8dp"
         android:textColor="@color/widget_task"
         android:textSize="19sp"
-        android:text="Mon 9:00 AM - Task"
+        android:text="@string/widget_preview_task_1"
         android:visibility="gone" />
 
     <TextView
@@ -61,7 +80,7 @@
         android:layout_marginTop="4dp"
         android:textColor="@color/widget_task"
         android:textSize="19sp"
-        android:text="Tue 10:00 AM - Task"
+        android:text="@string/widget_preview_task_2"
         android:visibility="gone" />
 
     <TextView
@@ -71,7 +90,7 @@
         android:layout_marginTop="4dp"
         android:textColor="@color/widget_task"
         android:textSize="19sp"
-        android:text="Wed 11:00 AM - Task"
+        android:text="@string/widget_preview_task_3"
         android:visibility="gone" />
 
     <TextView
@@ -81,6 +100,6 @@
         android:layout_marginTop="4dp"
         android:textColor="@color/widget_subtitle"
         android:textSize="18sp"
-        android:text="and 2 more"
+        android:text="@string/widget_preview_more"
         android:visibility="gone" />
 </LinearLayout>
